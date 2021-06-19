@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{ mix('backend/assets/css/style.css') }}"/>
     <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 
+@hasSection('css')
+    @yield('css')
+@endif
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>GlassAdmin - Site Control</title>
@@ -90,6 +94,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="{{ mix('backend/assets/js/libs.js') }}"></script>
 <script src="{{ asset('backend/assets/js/scripts.js') }}" type="text/javascript"></script>
+
+@hasSection('js')
+    @yield('js')
+@endif
 
 </body>
 </html>
