@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ mix('backend/assets/css/style.css') }}"/>
     <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>GlassAdmin - Site Control</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
 <div class="dash">
     <aside class="dash_sidebar">
         <article class="dash_sidebar_user">
-            <img class="dash_sidebar_user_thumb" src="assets/images/avatar.jpg" alt="" title=""/>
+            <img class="dash_sidebar_user_thumb" src="{{ url(asset('backend/assets/images/avatar.jpg')) }}" alt="" title=""/>
 
             <h1 class="dash_sidebar_user_name">
                 <a href="">Gustavo Web</a>
