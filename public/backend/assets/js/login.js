@@ -24,6 +24,10 @@ $(function () {
       if (response.message) {
         ajaxMessage(response.message, 3);
       }
+
+      if (response.redirect) {
+        window.location.href = response.redirect;
+      }
     }, 'json');
     console.log(action, email, password);
   });
