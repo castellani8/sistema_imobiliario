@@ -54,8 +54,8 @@
 
 </div>
 
-<script src="{{ mix('resources/views/admin/assets/js/jquery.js') }}"></script>
-<script src="{{ mix('resources/views/admin/assets/js/login.js') }}"></script>
+<script src="{{ mix('backend/assets/js/jquery.js') }}"></script>
+<script src="{{ mix('backend/assets/js/login.js') }}"></script>
 
 </body>
 </html>
