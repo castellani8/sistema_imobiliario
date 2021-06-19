@@ -85,10 +85,9 @@
     </section>
 </div>
 
-
-<script src="{{ mix('backend/assets/js/jquery.js') }}" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="{{ mix('backend/assets/js/libs.js') }}"></script>
-<script src="{{ url(mix('backend/assets/js/scripts.js')) }}" type="text/javascript"></script>
+<script src="{{ asset('backend/assets/js/scripts.js') }}" type="text/javascript"></script>
 
 </body>
 </html>
