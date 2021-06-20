@@ -40,7 +40,6 @@ class User extends FormRequest
             'company_work' => 'required',
             
             // Address
-            'required' => 'required',
         ];
     }
 }
