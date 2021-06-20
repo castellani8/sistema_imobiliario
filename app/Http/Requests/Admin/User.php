@@ -40,6 +40,7 @@ class User extends FormRequest
             'company_work' => 'required',
             
             // Address
+            'asdasdasdas' bucete.com
         ];
     }
 }
