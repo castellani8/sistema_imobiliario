@@ -35,12 +35,27 @@ class User extends FormRequest
             'civil_status'                  => 'required|in:married,separated,single,divorced,widower',
             
             // Income
-            'occupation' => 'required',
-            'income' => 'required',
+            'occupation'   => 'required',
+            'income'       => 'required',
             'company_work' => 'required',
             
             // Address
-            'asdasdasdas' bucete.com
+            'zipcode'      => 'required|min:8|max:9',
+            'street'       => 'required',
+            'number'       => 'required',
+            'complement'   => 'required',
+            'neighborhood' => 'required',
+            'state'        => 'required',
+            'city'         => 'required',
+
+            // contact
+            'cell' => 'required',
+
+            // access
+            'email' =>'required|email|unique:users',
+
+            // spouse
+            'type_of_communion' => 'required_if:civil_status,married,separated|in:Comunhão Universal de Bens,Comunhão Parcial de Bens,Separação Total de Bens,Participação Final de Aquestos'
         ];
     }
 }
