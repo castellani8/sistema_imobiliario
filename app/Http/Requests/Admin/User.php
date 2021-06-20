@@ -55,7 +55,17 @@ class User extends FormRequest
             'email' =>'required|email|unique:users',
 
             // spouse
-            'type_of_communion' => 'required_if:civil_status,married,separated|in:Comunhão Universal de Bens,Comunhão Parcial de Bens,Separação Total de Bens,Participação Final de Aquestos'
+            'type_of_communion' => 'required_if:civil_status,married,separated|in:Comunhão Universal de Bens,Comunhão Parcial de Bens,Separação Total de Bens,Participação Final de Aquestos',
+            'spouse_name'                          => 'required|min:3|max:191|',
+            'spouse_genre'                         => 'required_if:civil_status,married,separatedin:male, female,others',
+            'spouse_document'                      => 'required_if:civil_status,married,separated|min:11|max:14|unique:users',
+            'spouse_document_secondary'            => 'required_if:civil_status,married,separated|min:8|max:12',
+            'spouse_document_secondary_complement' => 'required_if:civil_status,married,separated',
+            'spouse_date_of_birth'                 => 'required_if:civil_status,married,separated|date_format:d/m/Y',
+            'spouse_place_of_birth'                => 'required_if:civil_status,married,separated',
+            'spouse_occupation'                    => 'required_if:civil_status,married,separated',
+            'spouse_income'                        => 'required_if:civil_status,married,separated',
+            'spouse_company_work'                  => 'required_if:civil_status,married,separated',
         ];
     }
 }
