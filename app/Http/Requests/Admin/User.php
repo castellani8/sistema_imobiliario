@@ -34,6 +34,13 @@ class User extends FormRequest
             'place_of_birth'                => 'required',
             'civil_status'                  => 'required|in:married,separated,single,divorced,widower',
             
-        ];
+            // Income
+            'occupation' => 'required',
+            'income' => 'required',
+            'company_work' => 'required',
+            
+            // Address
+            ''
+        ];sadasdasdasdas
     }
 }
