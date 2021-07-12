@@ -50,11 +50,11 @@
                         <div class="label_gc">
                             <span class="legend">Perfil:</span>
                             <label class="label">
-                                <input type="checkbox" name="lessor"><span>Locatário</span>
+                                <input type="checkbox" name="lessor" {{ (old('lessor') == 'on' || old('lessor') == true ? 'checked' : '') }}><span>Locatário</span>
                             </label>
 
                             <label class="label">
-                                <input type="checkbox" name="lessee"><span>Locador</span>
+                                <input type="checkbox" name="lessee" {{ (old('lessee') == 'on' || old('lessee') == true ? 'checked' : '') }}><span>Locador</span>
                             </label>
                         </div>
 
@@ -66,10 +66,10 @@
                         <div class="label_g2">
                             <label class="label">
                                 <span class="legend">*Genero:</span>
-                                <select name="genre" value="{{ old('genre') }}">
-                                    <option value="male">Masculino</option>
-                                    <option value="female">Feminino</option>
-                                    <option value="other">Outros</option>
+                                <select name="genre" value="">
+                                    <option value="male" {{ (old('genre') == 'male' ? 'selected' : '') }} >Masculino</option>
+                                    <option value="female" {{ (old('genre') == 'female' ? 'selected' : '') }}>Feminino</option>
+                                    <option value="other" {{ (old('genre') == 'other' ? 'selected' : '') }}>Outros</option>
                                 </select>
                             </label>
 
@@ -113,13 +113,13 @@
                                 <span class="legend">*Estado Civil:</span>
                                 <select name="civil_status">
                                     <optgroup label="Cônjuge Obrigatório">
-                                        <option value="married">Casado</option>
-                                        <option value="separated">Separado</option>
+                                        <option value="married" {{ (old('civil_status') == 'married' ? 'selected' : '') }}>Casado</option>
+                                        <option value="separated" {{ (old('civil_status') == 'separated' ? 'selected' : '') }}>Separado</option>
                                     </optgroup>
                                     <optgroup label="Cônjuge não Obrigatório">
-                                        <option value="single">Solteiro</option>
-                                        <option value="divorced">Divorciado</option>
-                                        <option value="widower">Viúvo</option>
+                                        <option value="single" {{ (old('civil_status') == 'single' ? 'selected' : '') }}>Solteiro</option>
+                                        <option value="divorced" {{ (old('civil_status') == 'divorced' ? 'selected' : '') }}>Divorciado</option>
+                                        <option value="widower" {{ (old('civil_status') == 'widower' ? 'selected' : '') }}>Viúvo</option>
                                     </optgroup>
                                 </select>
                             </label>
@@ -256,7 +256,7 @@
                                     <label class="label">
                                         <span class="legend">Senha:</span>
                                         <input type="password" name="password" placeholder="Senha de acesso"
-                                               value="{{ old('password') }}"/>
+                                               value=""/>
                                     </label>
                                 </div>
                             </div>
@@ -275,10 +275,10 @@
                                 <label class="label">
                                     <span class="legend">Tipo de Comunhão:</span>
                                     <select name="type_of_communion" class="select2">
-                                        <option value="Comunhão Universal de Bens">Comunhão Universal de Bens</option>
-                                        <option value="Comunhão Parcial de Bens">Comunhão Parcial de Bens</option>
-                                        <option value="Separação Total de Bens">Separação Total de Bens</option>
-                                        <option value="Participação Final de Aquestos">Participação Final de Aquestos
+                                        <option value="Comunhão Universal de Bens" {{ (old('type_of_communion') == 'Comunhão Universal de Bens' ? 'selected' : '') }}>Comunhão Universal de Bens</option>
+                                        <option value="Comunhão Parcial de Bens" {{ (old('type_of_communion') == 'Comunhão Parcial de Bens' ? 'selected' : '') }}>Comunhão Parcial de Bens</option>
+                                        <option value="Separação Total de Bens" {{ (old('type_of_communion') == 'Separação Total de Bens' ? 'selected' : '') }}>Separação Total de Bens</option>
+                                        <option value="Participação Final de Aquestos" {{ (old('type_of_communion') == 'Participação Final de Aquestos' ? 'selected' : '') }}>Participação Final de Aquestos
                                         </option>
                                     </select>
                                 </label>
@@ -293,9 +293,9 @@
                                     <label class="label">
                                         <span class="legend">Genero:</span>
                                         <select name="spouse_genre">
-                                            <option value="male">Masculino</option>
-                                            <option value="female">Feminino</option>
-                                            <option value="other">Outros</option>
+                                            <option value="male" {{ (old('spouse_genre') == 'male' ? 'selected' : '') }}>Masculino</option>
+                                            <option value="female" {{ (old('spouse_genre') == 'female' ? 'selected' : '') }}>Feminino</option>
+                                            <option value="other" {{ (old('spouse_genre') == 'other' ? 'selected' : '') }}>Outros</option>
                                         </select>
                                     </label>
 
@@ -485,11 +485,11 @@
                         <div class="label_gc">
                             <span class="legend">Conceder:</span>
                             <label class="label">
-                                <input type="checkbox" name="admin"><span>Administrativo</span>
+                                <input type="checkbox" name="admin" {{ (old('admin') == 'on' || old('admin') == true ? 'checked' : '') }}><span>Administrativo</span>
                             </label>
 
                             <label class="label">
-                                <input type="checkbox" name="client"><span>Cliente</span>
+                                <input type="checkbox" name="client" {{ (old('client') == 'on' || old('client') == true ? 'checked' : '') }}><span>Cliente</span>
                             </label>
                         </div>
                     </div>

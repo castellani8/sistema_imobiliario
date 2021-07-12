@@ -34,7 +34,7 @@ class User extends Authenticatable
         'cover',
         'occupation',
         'income',
-        'company-work',
+        'company_work',
         'zipcode',
         'street',
         'number',
@@ -55,7 +55,8 @@ class User extends Authenticatable
         'spouse_occupation',
         'spouse_income',
         'spouse_company_work',
-        
+        'admin',
+        'client'
     ];
 
     /**
@@ -137,6 +138,15 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($value);
     }
 
+    public function setAdminAttribute($value)
+    {
+        $this->attributes['admin'] = ($value === true || $value === 'on' ? 1 : 0);
+    }
+
+    public function setClientAttribute($value)
+    {
+        $this->attributes['client'] = ($value === true || $value === 'on' ? 1 : 0);
+    }
     
     private function convertStringToDate(string $param)
     {
