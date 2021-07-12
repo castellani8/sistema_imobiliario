@@ -40,11 +40,11 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         $user = new User();
         $user->fill($request->all());
-        \var_dump($user->getAttributes, $request->all());
+        var_dump($user->getAttributes(), $request->all());
     }
 
     /**
