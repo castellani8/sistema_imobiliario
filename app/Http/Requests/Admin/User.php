@@ -57,7 +57,7 @@ class User extends FormRequest
             // spouse
             'type_of_communion' => 'required_if:civil_status,married,separated|in:Comunhão Universal de Bens,Comunhão Parcial de Bens,Separação Total de Bens,Participação Final de Aquestos',
             'spouse_name'                          => 'required|min:3|max:191|',
-            'spouse_genre'                         => 'required_if:civil_status,married,separatedin:male, female,others',
+            'spouse_genre'                         => 'required_if:civil_status,married,separatedin:male, female,other',
             'spouse_document'                      => 'required_if:civil_status,married,separated|min:11|max:14',
             'spouse_document_secondary'            => 'required_if:civil_status,married,separated|min:8|max:12',
             'spouse_document_secondary_complement' => 'required_if:civil_status,married,separated',
