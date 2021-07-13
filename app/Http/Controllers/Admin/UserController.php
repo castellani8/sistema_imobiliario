@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
 use App\Http\Requests\Admin\User as UserRequest;
 
 class UserController extends Controller
@@ -42,13 +41,11 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $user = new User();
-        $user->fill($request->all());
-        var_dump($user->getAttributes(), $request->all());
+        $userCreate = User::create($request->all());
+
     }
 
-    /**
-     * Display the specified resource.
+     /*   ource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
