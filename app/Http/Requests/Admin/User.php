@@ -37,7 +37,7 @@ class User extends FormRequest
             // Income
             'occupation'   => 'required',
             'income'       => 'required',
-            'company_work' => 'required',
+            'company-work' => 'required',
             
             // Address
             'zipcode'      => 'required|min:8|max:9',

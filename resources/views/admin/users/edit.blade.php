@@ -3,7 +3,7 @@
 <section class="dash_content_app">
 
     <header class="dash_content_app_header">
-        <h2 class="icon-user-plus">Novo Cliente</h2>
+        <h2 class="icon-user-plus">Editar Cliente</h2>
 
         <div class="dash_content_app_header_actions">
             <nav class="dash_content_app_breadcrumb">
@@ -42,8 +42,9 @@
                 </li>
             </ul>
 
-            <form class="app_form" action="{{ route('admin.users.store') }}" method="post" enctype="multipart/form-data">
+            <form class="app_form" action="{{ route('admin.users.update', ['user' => $user->id]) }}" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 
                 <div class="nav_tabs_content">
                     <div id="data">
